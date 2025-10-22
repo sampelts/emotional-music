@@ -1,0 +1,20 @@
+#import necessary libraries
+import spotipy
+from spotipy.oauth2 import SpotifyOAuth
+import pandas as pd
+import os # <- Only using if we are global variables (hiding sensitive information)
+
+
+
+
+CLIENT_ID = #Initialize your Client ID here
+CLIENT_SECRET = #Initialize your Client Secret here
+REDIRECT_URI = #Initialize your Redirect_URI here
+scope = "insertScopeHere"
+
+sp = spotipy.Spotify(auth_manager=SpotifyOAuth(
+    client_id=CLIENT_ID,
+    client_secret=CLIENT_SECRET,
+    redirect_uri=REDIRECT_URI,
+    scope=scope
+))
